@@ -1,0 +1,362 @@
+.transaction-contents {
+  /* padding: 20px; */
+  background-color: #E6EAF4;
+}
+.div-col{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.button-toggle {
+  display: flex;
+  margin-top: -20px;
+  margin-left:-20px;
+  padding:  0 20px;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.toggle-button1{
+  margin-top: 6px;
+  background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3sease;
+}
+.toggle-button1:hover {
+  transform: scale(1.1);
+}
+/* Toolbar Styles */
+.toolbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
+  /* justify-content: space-between; */
+}
+
+/* Search Input */
+.toolbar input[type="text"] {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Smoky black shadow */
+}
+
+.toolbar input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+/* Status Filter Dropdown */
+.toolbar select {
+  width:200px;
+  margin-left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Smoky black shadow */
+}
+
+.toolbar select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+.toolbar button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Smoky black shadow */
+}
+
+/* Hover effect */
+.toolbar button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+}
+
+/* .toolbar button:hover {
+  background-color:black;
+  color: white;
+} */
+
+/* .tb-content{
+  display: flex;
+} */
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* Adds gap between rows */
+  margin-top: 10px;
+  /* background-color: #f5f5f5; */
+  border-radius: 8px;
+  overflow: hidden;
+}
+th{
+  background-color: #E6EAF4;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center; /* Centers text inside table */
+}
+
+/* Increase row height */
+tr {
+  background-color: white;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  border-radius: 6px;
+  height: 70px; /* Increased row height */
+}
+
+/* Ensure status text fits */
+.status {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* Status styles */
+.status-continuing {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: #ffdd67;
+}
+
+.status-ongoing {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: #ffdd67;
+}
+
+.status-completed {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: #33b18f; /* Slightly dimmer green */
+}
+
+
+.status-in-progress {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: rgba(23, 162, 184, 0.8);
+}
+
+.status-in-review {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: rgba(108, 117, 125, 0.8);
+}
+
+.status-pending {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: #ffdd67;
+}
+
+.status-not-started {
+  padding: 6px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: #f53d58;
+}
+
+/* Toggle icon (▶ ▼) */
+.toggle-icon {
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Sub-stage row styling */
+.sub-stage {
+  background-color: #f9f9f9;
+  height: 45px;
+  /* margin-left: 10px; */
+  align-items: center;
+}
+
+
+/* Hover effect */
+tr:hover {
+  background-color: #ebebeb;
+}
+
+/* File icon styling */
+.file-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(55%) sepia(64%) saturate(292%) hue-rotate(175deg)
+    brightness(90%) contrast(89%);
+}
+
+/* Document icon styling */
+.document-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #226fea;
+}
+
+/* Responsible column */
+.responsible {
+  margin-top: 22px;
+  /* margin-left: 100px; */
+  width: 200px;
+  height: 13px;
+  padding: 5px;
+  background-color: #f0f4f9;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+/* @media(max-width:1400) {
+  .responsible{
+    margin-left: 50px;
+  }
+} */
+
+/* Responsive Design */
+
+@media (min-width:1024px){
+  .responsible{
+    margin-left: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .toolbar input[type="text"] {
+    width: 300px;
+  }
+ 
+}
+
+@media (max-width: 768px) {
+  .toolbar input[type="text"] {
+    width: 250px;
+  }
+  
+  .toolbar select {
+    width: 120px;
+  }
+  
+  .toolbar button {
+    width: 35px;
+    height: 35px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .toolbar input[type="text"] {
+    width: 180px;
+  }
+  
+  .toolbar select {
+    width: 100px;
+  }
+  
+  .toolbar button {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,8 @@
+  [{ "name": "Panoroma","hover-name":"Panoroma", "icon": "Panoroma.svg" },
+    { "name": "Transaction","hover-name":"Muamele", "icon": "transaction.svg" },
+    { "name": "Documents","hover-name":"Dökümanlar", "icon": "documents.svg" },
+    { "name": "E-Mails","hover-name":"E-Postalar", "icon": "envelope.svg" },
+    { "name": "Reports","hover-name":"Reporlama", "icon": "reports.svg" },
+    { "name": " Managements Panel","hover-name":"Yönetim Paneli", "icon": "sliders.svg" },
+    { "name": "Transaction Calendar","hover-name":"Muamele Takvimi", "icon": "calender.svg" }
+  ]

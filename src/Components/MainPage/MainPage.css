@@ -1,0 +1,163 @@
+/* Main Container */
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d1d1d1; /* Light grey background */
+}
+
+/* Sidebar Container */
+.sideBar-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px; /* Adjusted width */
+    height: 100vh;
+    background-color: #002874; /* Blue */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Right Bar */
+.right-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80px; /* Adjusted width */
+    height: 100vh;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Content Area */
+.content-container {
+    margin-left: 80px; /* Adjusted for new sidebar width */
+    flex-grow: 1;
+    height: 100vh;
+      background-color: #E6EAF4;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: margin-right 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+    position: relative;
+}
+
+/* When Right Bar is visible */
+.with-right-bar {
+    margin-right: 80px; /* Adjusted for right bar */
+}
+
+/* When Right Bar is hidden, content takes full width */
+.full-width {
+    margin-right: 0;
+}
+
+/* Transaction Bar */
+.transaction-bar {
+    width: 300px; /* Default width */
+    background-color: #EFF1F5;
+    height: 100%;
+    position: fixed;
+    /* left: 80px; */
+    top: 0;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Content Bar - Adjusts based on transaction bar */
+.content-bar {
+    flex-grow: 1;
+    padding: 20px;
+    height: 100%;
+    background-color: #E6EAF4;
+    color: black;
+    box-sizing: border-box;
+    text-align: center;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* When Transaction Bar is Open */
+.content-container .transaction-bar + .content-bar {
+    margin-left: 300px;
+}
+
+/* When Transaction Bar is Closed */
+.content-container .content-bar {
+    margin-left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .transaction-bar {
+        width: 250px;
+    }
+    
+    .content-container .transaction-bar + .content-bar {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sideBar-container {
+        width: 70px;
+    }
+
+    .right-container {
+        width: 70px;
+    }
+
+    .content-container {
+        margin-left: 70px;
+    }
+
+    .with-right-bar {
+        margin-right: 70px;
+    }
+
+    .transaction-bar {
+        width: 200px;
+    }
+
+    .content-container .transaction-bar + .content-bar {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sideBar-container {
+        width: 60px;
+    }
+
+    .right-container {
+        width: 60px;
+    }
+
+    .content-container {
+        margin-left: 60px;
+    }
+
+    .with-right-bar {
+        margin-right: 60px;
+    }
+
+    .transaction-bar {
+        width: 180px;
+    }
+
+    .content-container .transaction-bar + .content-bar {
+        margin-left: 180px;
+    }
+}

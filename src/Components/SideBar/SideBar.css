@@ -1,0 +1,156 @@
+/* Sidebar Container */
+.sidebar-container {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px; /* Decreased width */
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allows scrolling if needed */
+    overflow-x: hidden; /* Prevents unwanted horizontal scroll */
+}
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 18px; /* Smaller logo */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Menu Container */
+.menu-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    overflow-y: auto; /* Allows scrolling if needed */
+    max-height: calc(100vh - 120px); /* Ensures it fits within screen height */
+    padding-bottom: 10px; /* Prevents last item from being cut off */
+}
+
+/* Scrollbar Styling (Optional - Improves UX) */
+.menu-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Menu Item */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* Ensure consistent width */
+    padding: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-left 0.3s ease-in-out;
+    border-left: 2px solid transparent; /* Prevents width shift */
+    box-sizing: border-box; /* Ensures width remains unchanged */
+}
+
+/* Change icon color to white */
+.menu-item img {
+    width: 18px; /* Smaller icons */
+    height: auto;
+    filter: brightness(0) invert(1); /* Makes image white */
+}
+
+/* Menu Text */
+.menu-text {
+    font-size: 7px;
+    margin-top: 3px;
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Alternative for better compatibility */
+    white-space: normal; /* Prevents text from breaking */
+}
+
+/* Hover and Active States */
+.menu-item-hovered,
+.menu-item:hover,
+.menu-item-active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #1F94FF;
+    border-left-color: #1F94FF; /* Only change color, not width */
+}
+
+/* User Profile */
+.user-profile-container {
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+.user-profile {
+    width: 35px; /* Smaller profile image */
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 768px) {
+    .sidebar-container {
+        width: 70px; /* Even smaller sidebar for tablets */
+    }
+
+    .menu-item {
+        width: 65px;
+        padding: 4px;
+    }
+
+    .menu-item img {
+        width: 16px;
+    }
+
+    .menu-text {
+        font-size: 6px;
+    }
+
+    .user-profile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-container {
+        width: 60px; /* Smallest sidebar for mobile */
+    }
+
+    .menu-item {
+        width: 60px;
+        padding: 3px;
+    }
+
+    .menu-item img {
+        width: 14px;
+    }
+
+    .menu-text {
+        font-size: 5.5px;
+    }
+
+    .user-profile {
+        width: 25px;
+        height: 25px;
+    }
+}
