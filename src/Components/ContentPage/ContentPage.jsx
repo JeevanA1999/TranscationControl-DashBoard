@@ -121,36 +121,6 @@ const TransactionContents = () => {
 
     return matchesSearch && matchesStatus;
   });
-  const filteredItemsSort = sortedItems.filter((item) => {
-    const search = debouncedSearch.toLowerCase();
-    const matchesSearch =
-      item.titleName.toLowerCase().includes(search) ||
-      (item.responsible && item.responsible.toLowerCase().includes(search)) ||
-      (item.status && item.status.toLowerCase().includes(search)) ||
-      (item.updateDate && item.updateDate.toLowerCase().includes(search));
-
-    const matchesStatus =
-      !filters.stageStatus || item.status === filters.stageStatus;
-    const matchesResponsible =
-      !filters.responsibleParty ||
-      item.responsible === filters.responsibleParty;
-
-    // Date range filtering
-    const itemDate = new Date(item.updateDate);
-    const startDate = filters.dateRange.start
-      ? new Date(filters.dateRange.start)
-      : null;
-    const endDate = filters.dateRange.end
-      ? new Date(filters.dateRange.end)
-      : null;
-
-    const matchesDate =
-      (!startDate || itemDate >= startDate) &&
-      (!endDate || itemDate <= endDate);
-
-    return matchesSearch && matchesStatus && matchesResponsible && matchesDate;
-  });
-
   // Download CSV function
   const downloadCSV = () => {
     const headers = [

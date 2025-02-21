@@ -32,7 +32,7 @@
     flex-direction: column;
   }
   
-  /* Sidebar Header */
+ 
   .transaction-sidebar-header {
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
     margin-bottom: 15px;
   }
   
-  /* Sidebar Stages */
+ 
   .transaction-sidebar-stages {
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@
     color: gray;
   }
   
-  /* Sidebar Controls */
+
   .transaction-sidebar-controls {
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@
   }
   
   
-  /* Menu List */
+
   .transaction-listmenu-list {
     list-style: none;
     padding: 0;
@@ -153,8 +153,7 @@
     color: white;
     font-weight: bold;
   }
-  
-  /* Menu Title */
+
   .transaction-listmenu-title {
     display: flex;
     align-items: center;
@@ -166,8 +165,6 @@
     width: 20px;
     height: 20px;
   }
-  
-  /* Submenu */
   .transaction-listmenu-submenu-list {
     list-style: none;
     padding-left: 30px;
@@ -186,11 +183,9 @@
     color: black;
   }
   
-  /* Responsive */
+
   @media screen and (max-width: 768px) {
-    /* .transaction-sidebar {
-      width: 240px;
-    } */
+   
   
     .transaction-sidebar-header h3 {
       font-size: 16px;
@@ -198,10 +193,7 @@
   }
   
   @media screen and (max-width: 480px) {
-    /* .transaction-sidebar {
-      width: 220px;
-    } */
-  
+   
     .transaction-sidebar-header h3 {
       font-size: 14px;
     }

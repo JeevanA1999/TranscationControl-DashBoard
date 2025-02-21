@@ -1,6 +1,6 @@
 .transaction-container {
   display: grid;
-  grid-template-columns: 4fr 1fr; /* Main content 75%, RightBar 25% */
+  grid-template-columns: 4fr 1fr; 
  gap: 10px;
   background-color: #E6EAF4;
  
@@ -8,7 +8,7 @@
 
 
 .transaction-contents {
-  /* padding: 20px; */
+  
   background-color: #E6EAF4;
 }
 .div-col{
@@ -19,7 +19,7 @@
 .button-toggle {
   display: flex;
   margin-top: -20px;
-  /* margin-left:-20px; */
+
   padding:  0 20px;
   width: 100%;
   background-color: white;
@@ -45,7 +45,7 @@
   align-items: center;
   gap: 30px;
   margin-bottom: 15px;
-  /* justify-content: space-between; */
+ 
 }
 
 /* Search Input */
@@ -66,7 +66,7 @@
   border-color: #007bff;
 }
 
-/* Status Filter Dropdown */
+
 .toolbar select {
   width:200px;
   margin-left: -10px;
@@ -87,7 +87,7 @@
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Buttons */
+
 .toolbar button {
   width: 40px;
   height: 40px;
@@ -103,22 +103,12 @@
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Smoky black shadow */
 }
-
-/* Hover effect */
 .toolbar button:hover {
   background-color: #f0f0f0;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
 }
 
-/* .toolbar button:hover {
-  background-color:black;
-  color: white;
-} */
 
-/* .tb-content{
-  display: flex;
-} */
-/* Table Styles */
 table {
   width: 100%;
   border-collapse: separate;
@@ -134,18 +124,18 @@ th{
 
 th, td {
   padding: 15px;
-  text-align: center; /* Centers text inside table */
+  text-align: center; 
 }
 
-/* Increase row height */
+
 tr {
   background-color: white;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   border-radius: 6px;
-  height: 70px; /* Increased row height */
+  height: 70px; 
 }
 
-/* Ensure status text fits */
+
 .status {
   height: fit-content;
   display: flex;
@@ -157,7 +147,7 @@ tr {
   font-weight: bold;
 }
 
-/* Status styles */
+
 .status-continuing {
   padding: 6px;
   height: fit-content;
@@ -200,10 +190,9 @@ tr {
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
-  background-color: #33b18f; /* Slightly dimmer green */
+  background-color: #33b18f; 
+
 }
-
-
 .status-in-progress {
   padding: 6px;
   height: fit-content;
@@ -264,7 +253,7 @@ tr {
   background-color: #f53d58;
 }
 
-/* Toggle icon (▶ ▼) */
+
 .toggle-icon {
   cursor: pointer;
   margin-right: 8px;
@@ -272,7 +261,7 @@ tr {
   color: gray;
 }
 
-/* Sub-stage row styling */
+
 .sub-stage {
   background-color: #f9f9f9;
   height: 45px;
@@ -281,12 +270,12 @@ tr {
 }
 
 
-/* Hover effect */
+
 tr:hover {
   background-color: #ebebeb;
 }
 
-/* File icon styling */
+
 .file-icon {
   width: 20px;
   height: 20px;
@@ -294,7 +283,6 @@ tr:hover {
     brightness(90%) contrast(89%);
 }
 
-/* Document icon styling */
 .document-icon {
   display: flex;
   align-items: center;
@@ -302,7 +290,7 @@ tr:hover {
   color: #226fea;
 }
 
-/* Responsible column */
+
 .responsible {
   margin-top: 22px;
   /* margin-left: 100px; */
@@ -317,22 +305,7 @@ tr:hover {
   border-radius: 5px;
   font-weight: bold;
 }
-.right-bar {
-  /* margin-right: 10px; */
-  /* margin-top: 100px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
-}
 
-/* @media(max-width:1400) {
-  .responsible{
-    margin-left: 50px;
-  }
-} */
-
-/* Responsive Design */
 
 @media (min-width:1024px){
   .responsible{

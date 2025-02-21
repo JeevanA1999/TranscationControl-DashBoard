@@ -1,4 +1,4 @@
-/* Overlay */
+
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -12,14 +12,14 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Popup Content */
+
   .popup-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
   }
   
-  /* Header */
+
   .popup-header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@
     color: #2c3e50;
   }
   
-  /* Close Button */
+ 
   .close-btn {
     border: none;
     background: none;
@@ -46,7 +46,7 @@
     color: #d9534f;
   }
   
-  /* User Info */
+
   .user-info {
     display: flex;
     align-items: center;
@@ -70,7 +70,7 @@
     color: #777;
   }
   
-  /* Note Section */
+ 
   .note-title {
     font-size: 14px;
     font-weight: bold;
@@ -83,7 +83,7 @@
     margin-top: 5px;
   }
   
-  /* File Info */
+  
   .file-info {
     display: flex;
     justify-content: space-between;

@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./VersionPopup.css";
 
 const VersionPopup = ({ isOpen, onClose, documentDetails }) => {
-  // Dummy data for testing
+  
   const dummyData = {
     version: "3.1",
-    userImage: "https://via.placeholder.com/40", // Placeholder profile image
+    userImage: "https://via.placeholder.com/40", 
     updatedBy: "Alice Johnson",
     updatedAt: "2025-02-18 14:35",
     note: "Updated document with the latest compliance guidelines.",
@@ -27,15 +27,14 @@ const VersionPopup = ({ isOpen, onClose, documentDetails }) => {
     ],
   };
 
-  // Use actual document details if provided, otherwise use dummy data
-//   const data = documentDetails || dummyData;
+  
 const data = dummyData;
   useEffect(() => {
     console.log("Popup Visibility:", isOpen);
     console.log("Document Details:", data);
   }, [isOpen, data]);
 
-  if (!isOpen) return null; // Ensure popup is only rendered when open
+  if (!isOpen) return null; 
 
   return (
     <div className="popup-overlay">

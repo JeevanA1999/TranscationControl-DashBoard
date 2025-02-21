@@ -3,7 +3,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #d1d1d1; /* Light grey background */
+    background-color: #d1d1d1; 
 }
 
 /* Sidebar Container */
@@ -11,7 +11,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 80px; /* Adjusted width */
+    width: 80px; 
     height: 100vh;
     background-color: #002874; /* Blue */
     color: white;
@@ -28,7 +28,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    width: 80px; /* Adjusted width */
+    width: 80px; 
     height: 100vh;
     background-color: white;
     color: black;
@@ -40,9 +40,9 @@
     font-weight: bold;
 }
 
-/* Content Area */
+
 .content-container {
-    margin-left: 80px; /* Adjusted for new sidebar width */
+    margin-left: 80px; 
     flex-grow: 1;
     height: 100vh;
       background-color: #E6EAF4;
@@ -55,19 +55,17 @@
     position: relative;
 }
 
-/* When Right Bar is visible */
+/* 
 .with-right-bar {
-    margin-right: 80px; /* Adjusted for right bar */
-}
+    margin-right: 80px; }
 
-/* When Right Bar is hidden, content takes full width */
 .full-width {
     margin-right: 0;
-}
+} */
 
-/* Transaction Bar */
+
 .transaction-bar {
-    width: 300px; /* Default width */
+    width: 300px; 
     background-color: #EFF1F5;
     height: 100%;
     position: fixed;
@@ -89,17 +87,15 @@
     transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
-/* When Transaction Bar is Open */
 .content-container .transaction-bar + .content-bar {
     margin-left: 300px;
 }
 
-/* When Transaction Bar is Closed */
+
 .content-container .content-bar {
     margin-left: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .transaction-bar {
         width: 250px;
