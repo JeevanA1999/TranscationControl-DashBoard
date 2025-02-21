@@ -1,3 +1,12 @@
+.transaction-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr; /* Main content 75%, RightBar 25% */
+ gap: 10px;
+  background-color: #E6EAF4;
+ 
+}
+
+
 .transaction-contents {
   /* padding: 20px; */
   background-color: #E6EAF4;
@@ -10,7 +19,7 @@
 .button-toggle {
   display: flex;
   margin-top: -20px;
-  margin-left:-20px;
+  /* margin-left:-20px; */
   padding:  0 20px;
   width: 100%;
   background-color: white;
@@ -308,7 +317,14 @@ tr:hover {
   border-radius: 5px;
   font-weight: bold;
 }
-
+.right-bar {
+  /* margin-right: 10px; */
+  /* margin-top: 100px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+}
 
 /* @media(max-width:1400) {
   .responsible{

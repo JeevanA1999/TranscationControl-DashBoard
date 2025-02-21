@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./ContentPage.css";
 import file from "../../assets/word.svg";
 import { HiDownload } from "react-icons/hi";
@@ -8,16 +8,13 @@ import VersionPopup from "./VersionPopup";
 import FilterModal from "./FilterModal";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { toggleSidebar } from "../../store/sidebarSlice";
-import { 
-  FaHome
-} from "react-icons/fa";
-import chevronRight from "../../assets/chevron-right.svg"
+import { FaHome } from "react-icons/fa";
+import chevronRight from "../../assets/chevron-right.svg";
 import RightBar from "../RightBar/RightBar";
-
 
 const TransactionContents = () => {
   const dispatch = useDispatch();
-  
+
   const isOpen = useSelector((state) => state.sidebar.isOpen);
   const menuItems = useSelector((state) => state.menu.menuItems);
   const [expandedRows, setExpandedRows] = useState({});
@@ -185,46 +182,58 @@ const TransactionContents = () => {
   };
 
   return (
+    <div className="transaction-container">
+      {/* Main Content */}
     <div className="transaction-contents">
       {/* <h2>Transaction Contents</h2> */}
-      
       {/* Filter Modal */}
       {/* Toolbar */}
       <div className="div-col">
         <div className="button-toggle">
-        <button onClick={() => dispatch(toggleSidebar())} className="toggle-button1">
-  {!isOpen && <FaArrowRightLong />}
-</button>
-<FaHome onClick={() => (window.location.href = "/")} style={{ cursor: "pointer" }} />
-<img src={chevronRight}/>{"CLIENT"}<img src={chevronRight}/>{"MATTER"}<img src={chevronRight}/>{"TRANSCATION DETAILS PAGE"} <img src={chevronRight}/><h3>TRANSACTION CONTENTS</h3>
+          <button
+            onClick={() => dispatch(toggleSidebar())}
+            className="toggle-button1"
+          >
+            {!isOpen && <FaArrowRightLong />}
+          </button>
+          <FaHome
+            onClick={() => (window.location.href = "/")}
+            style={{ cursor: "pointer" }}
+          />
+          <img src={chevronRight} />
+          {"CLIENT"}
+          <img src={chevronRight} />
+          {"MATTER"}
+          <img src={chevronRight} />
+          {"TRANSCATION DETAILS PAGE"} <img src={chevronRight} />
+          <h3>TRANSACTION CONTENTS</h3>
         </div>
-      <div className="toolbar">
-        <input
-          type="text"
-          placeholder="Search by Phase, Status, or Responsible Party"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <select
-          value={statusFilter}
-          onChange={(e) => setStatusFilter(e.target.value)}
-        >
-          <option value="">All Status</option>
-          <option value="Not Started">Not Started</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Completed">Completed</option>
-        </select>
-        <button onClick={downloadCSV}>
-          <HiDownload />
-        </button>
-        <button onClick={() => setIsFilterModalOpen(true)}>
-          <BiFilterAlt />
-        </button>{" "}
-        {/* Placeholder for filter settings */}
-      </div>
+        <div className="toolbar">
+          <input
+            type="text"
+            placeholder="Search by Phase, Status, or Responsible Party"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+          >
+            <option value="">All Status</option>
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <button onClick={downloadCSV}>
+            <HiDownload />
+          </button>
+          <button onClick={() => setIsFilterModalOpen(true)}>
+            <BiFilterAlt />
+          </button>{" "}
+          {/* Placeholder for filter settings */}
+        </div>
       </div>
       {/* Table */}
-     
       <table>
         <thead>
           <tr>
@@ -304,8 +313,7 @@ const TransactionContents = () => {
                 <td>
                   {getTotalDocuments(item) > 0 ? (
                     <span className="document-icon">
-                      <img src={file} alt="Document" className="file-icon" /> 
-                    
+                      <img src={file} alt="Document" className="file-icon" />
                     </span>
                   ) : (
                     "-"
@@ -343,7 +351,6 @@ const TransactionContents = () => {
                             alt="Document"
                             className="file-icon"
                           />{" "}
-                         
                         </span>
                       ) : (
                         "-"
@@ -359,15 +366,13 @@ const TransactionContents = () => {
           ))}
         </tbody>
       </table>
-      
-  
       {isFilterModalOpen && (
-  <FilterModal
-    isOpen={isFilterModalOpen}
-    onClose={() => setIsFilterModalOpen(false)}
-    onApplyFilters={handleApplyFilters}
-  />
-)}
+        <FilterModal
+          isOpen={isFilterModalOpen}
+          onClose={() => setIsFilterModalOpen(false)}
+          onApplyFilters={handleApplyFilters}
+        />
+      )}
       {popupOpen && selectedDocument && (
         <VersionPopup
           isOpen={popupOpen}
@@ -375,6 +380,9 @@ const TransactionContents = () => {
           documentDetails={selectedDocument}
         />
       )}{" "}
+    </div>
+     {/* Right Sidebar */}
+      <RightBar />
     </div>
   );
 };
