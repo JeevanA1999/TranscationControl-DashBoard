@@ -152,8 +152,8 @@ const TransactionContents = () => {
   };
 
   return (
-    <div className="transaction-container">
-      {/* Main Content */}
+    // <div className="transaction-container">
+      
     <div className="transaction-contents">
       {/* <h2>Transaction Contents</h2> */}
       {/* Filter Modal */}
@@ -351,9 +351,9 @@ const TransactionContents = () => {
         />
       )}{" "}
     </div>
-     {/* Right Sidebar */}
-      <RightBar />
-    </div>
+     
+    //   <RightBar />
+    // </div>
   );
 };
 
